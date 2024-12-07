@@ -25,5 +25,5 @@ execute if score $else cnn.main = $total_pixel cnn.main run scoreboard players a
 # player_nameの一文字目を消す
 data modify storage custom_nick_name:_ __temp__.name set string storage custom_nick_name:_ __temp__.name 1
 
-# player_nameがなくなるまで再起
+# player_nameがなくなるまで再帰
 execute unless data storage custom_nick_name:_ {__temp__:{name: ""}} run function cnn:core/pixel/loop
